@@ -3,8 +3,8 @@
 
 
 void serveur_corps(int connfd) {
-	int end = 0;
-	int cmd;
+	int end = 0; /* boolean */
+	int cmd;     /* code command */
 	
 	while (!end) {
 		/* read the command */
@@ -16,7 +16,7 @@ void serveur_corps(int connfd) {
 			end = 1;
 			break;
 		case 1:
-			serveur_get(connfd);
+			end = serveur_get(connfd);
 			break;
 		default:
 			printf("Invalid command!\n");
@@ -25,7 +25,7 @@ void serveur_corps(int connfd) {
 	}
 }
 
-void serveur_get(int connfd) {
+int serveur_get(int connfd) {
 	size_t n;
 	char buf[MAXBUF];
 	char frep[MAXBUF]; /* file repertory */
@@ -34,6 +34,7 @@ void serveur_get(int connfd) {
 	int fsend;         /* file size already send */
 	int fd;            /* file descriptor */
 	rio_t rio;
+	int pb = 0;
 	
 	/* read the name of the file to transfer */
 	Rio_readn(connfd, &n, sizeof(size_t));
@@ -58,14 +59,21 @@ void serveur_get(int connfd) {
 		/* send the file content */
 		Rio_readinitb(&rio, fd);
 		n = Rio_readnb(&rio, buf, blksize);
-		while (n > 0) {
-			Rio_writen(connfd, buf, n);
-			n = Rio_readnb(&rio, buf, blksize);
+		while (!pb && n > 0) {
+			n = rio_writen(connfd, buf, n);
+			if (n != -1)
+				n = Rio_readnb(&rio, buf, blksize);
+			else
+				pb = 1;
 		}
 		Close(fd);
 
 		/* print informations about te transfer */
-		printf("Transfer successfully complete (%ld bytes send).\n", fsize);
+		if (!pb)
+			printf("Transfer successfully complete (%ld bytes send).\n", fsize);
+		else
+			printf("Problem encountered: transfer interrupted!\n");
 	}
+	return pb;
 }
 
