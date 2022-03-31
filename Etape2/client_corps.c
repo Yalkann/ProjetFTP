@@ -38,6 +38,7 @@ void client_corps(int clientfd) {
 			Rio_writen(clientfd, &cmd, sizeof(int));
 			end = 1;
 		} else if ((strcmp(argv[0], "get") == 0) && err) {
+			printf("get %s\n", argv[1]);
 			cmd = 1;
 			Rio_writen(clientfd, &cmd, sizeof(int));
 			client_get(clientfd, argv[1], atoi(argv[2]));
