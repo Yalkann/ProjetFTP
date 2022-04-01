@@ -17,7 +17,7 @@ void client_body(int clientfd) {
 		err = Rio_readlineb(&rio, line, MAXLINE);
 		Close(logfd);
 	}
-
+	
 	while (!end) {
 		if (!err) {
 			/* read a line command */
@@ -33,7 +33,9 @@ void client_body(int clientfd) {
 			argc++;
 		
 		/* interprete the command */
-		if ((strcmp(argv[0], "bye") == 0) && (argc == 1)) {
+		if (strlen(line) == 0) {
+			continue;
+		} else if ((strcmp(argv[0], "bye") == 0) && (argc == 1)) {
 			cmd = 0;
 			Rio_writen(clientfd, &cmd, sizeof(int));
 			end = 1;

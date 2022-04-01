@@ -13,9 +13,13 @@ void sigchld(int sgn) {
 
 
 void sigintChld(int sgn) {
-	/* close file descriptor if existing */
+	/* close communication socket if existing */
 	if (fcntl(connfd, F_GETFD) > 0)
 		Close(connfd);
+		
+	/* close connection socket if existing */
+	if (fcntl(listenfd, F_GETFD) > 0)
+		Close(listenfd);
 	
 	exit(0);
 }
@@ -26,7 +30,7 @@ void sigintFthr(int sgn) {
 	Kill(0, SIGINT);
 	while(waitpid(-1, NULL, 0) > 0);
 	
-	/* close file descriptor if existing */
+	/* close connection socket if existing */
 	if (fcntl(listenfd, F_GETFD) > 0)
 		Close(listenfd);
 	
