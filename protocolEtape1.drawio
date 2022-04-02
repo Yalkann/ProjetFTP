@@ -1,1 +1,67 @@
-<mxfile host="app.diagrams.net" modified="2022-03-31T16:43:22.507Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36 OPR/85.0.4341.18" etag="IDn3Fe5sp89kRU80o4Ts" version="16.5.2" type="device"><diagram id="EzknV4vrXtdMTsb4mSIc" name="Page-1">7Vltb5swEP41UT9V4iVhyce8ddW0SZMyqZ89uIBVY2fGJHS/fueAIeC0a7Yk60S/BN/ZPpt77jkfzsCfp8VHSTbJFxEBG3hOVAz8xcDzXMcb4kNrnkrNKAhKRSxpVA1qFCv6E8zMSpvTCLLWQCUEU3TTVoaCcwhVS0ekFLv2sLVg7VU3JAZLsQoJs7UPNFJJqR2PnEZ/DzROzMquU/WkxAyuFFlCIrE7UPnLgT+XQqiylRZzYNp5xi/lvLtneuuNSeDqNRPu08Xj48P9YrkUZBunnybe4vOtV1rZEpZXL1xtVj0ZDwCPptqRKHHBUTlLVMpQcrEpRc4j0Cs4KJVzIbJc2uzRrd8cQwZECko+4ZBd41vj2uTArUYngRFFt23zpII4rs3VK3wVFBf2HBOOQWWnCsbh2GmbyEQuQ6hmHfryN4Zq2RhSRMagLEPYOHjtRrWH6gTY/F7BNjoXbF1D14ZteAS2gKGzZmux32eDX/AjF6bjNtunxSkOcIebounEVqyfc0Y1UpUt3Fppruy0IkNBodrhkCkpHmEumJBNuKwpYx0VYTTmKIa4GqB+tgWpKCbLadWR0ijSy8x2CVWw2pBQr7nDo+GZoNMGoDg17MwEvwOnkQ/CMjgSlr7zfAS2ID8V39GF8M1AbiGXxth32WDbM8hHbw3yyUmZOGQky2j4UjLWOFZlkDv8D5Jz9yj0nDMlZ8vQhZOz61pQoocpBj1Wr4A/jOjikyBHtBTl+MNFapprGib7wW+Sesej6q+oWONjqPjBpqLvXJOL7mnVbB/IeK5KyTJ0aTLaFS7ShvL4nXk28+ro+XfMO1bZ9op5XcL43U+LP/20tAxdmnl2EfutdebVdHOEFm9dDTPV5yO0evkNFDRTsEcp6y87/SMl6pXZGbyzs3ODMDwTOy1Dl2bn2IIS+FbQuka90TXrYO4PpmMJat+YGOaGiBrwvMfn5qgNnmsz05tck5m+DefqFam0/BQJRZrmHN2rqOBarm6B7urrAgcyHbtrkGkZCdAfsK0DeXIE7DNdFaDY3OOXVG/+DfGXvwA=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-04-02T15:42:26.889Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="lgVuLv3h5UPiUd5_nGm5" version="17.4.0" type="github">
+  <diagram id="EzknV4vrXtdMTsb4mSIc" name="Page-1">
+    <mxGraphModel dx="1102" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-2" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="240" as="sourcePoint" />
+            <mxPoint x="160" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-3" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="240" as="sourcePoint" />
+            <mxPoint x="560" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-4" value="&lt;font style=&quot;font-size: 14px&quot;&gt;Client&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="130" y="20" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-5" value="&lt;font style=&quot;font-size: 14px&quot;&gt;Serveur&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="530" y="20" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-9" value="" style="endArrow=classic;html=1;rounded=0;fontSize=14;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="80" as="sourcePoint" />
+            <mxPoint x="560" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-11" value="entier : nombre de caractères du nom du fichier" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="160" y="60" width="400" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-12" value="" style="endArrow=classic;html=1;rounded=0;fontSize=14;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="120" as="sourcePoint" />
+            <mxPoint x="560" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-13" value="chaine de caractères : nom du fichier" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="160" y="100" width="400" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-14" value="" style="endArrow=classic;html=1;rounded=0;fontSize=14;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="160" as="sourcePoint" />
+            <mxPoint x="160" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-15" value="entier t : taille/nombre d&#39;octets du fichier ou -1 s&#39;il n&#39;existe pas" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="160" y="140" width="400" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-16" value="" style="endArrow=classic;html=1;rounded=0;fontSize=14;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="200" as="sourcePoint" />
+            <mxPoint x="160" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-18" value="t octets : contenu du fichier en une seule fois" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="160" y="180" width="400" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-38" value="Si le fichier n&#39;existe pas la communication client-serveur est fermée" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="560" y="130" width="160" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
