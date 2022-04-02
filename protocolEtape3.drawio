@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-02T16:02:23.516Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="2o4j9wDWkZkjskyARDEt" version="17.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-02T16:03:54.689Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="cdCdxI_M0lDW-3BMb3bo" version="17.4.0" type="github">
   <diagram id="kDqgaDnyJg1N7sdAMujT" name="Page-1">
     <mxGraphModel dx="1102" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -28,7 +28,7 @@
             <mxPoint x="560" y="80" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-ZzgaIiHg7fhx1HZzrY5-8" value="entier : nb de caractères du nom d&#39;hôte du serveur esclave" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="-ZzgaIiHg7fhx1HZzrY5-8" value="entier n : nb de caractères du nom d&#39;hôte du serveur esclave" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="160" y="60" width="400" height="20" as="geometry" />
         </mxCell>
         <mxCell id="-ZzgaIiHg7fhx1HZzrY5-9" value="" style="endArrow=classic;html=1;rounded=0;fontSize=14;" edge="1" parent="1">
@@ -37,7 +37,7 @@
             <mxPoint x="160" y="120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-ZzgaIiHg7fhx1HZzrY5-10" value="chaine de caractères : nom d&#39;hôte du serveur esclave" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="-ZzgaIiHg7fhx1HZzrY5-10" value="chaine de n caractères : nom d&#39;hôte du serveur esclave" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="160" y="100" width="400" height="20" as="geometry" />
         </mxCell>
         <mxCell id="-ZzgaIiHg7fhx1HZzrY5-11" value="" style="endArrow=classic;html=1;rounded=0;fontSize=14;" edge="1" parent="1">
