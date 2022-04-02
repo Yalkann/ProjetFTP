@@ -1,13 +1,16 @@
 #include "csapp.h"
 #include "client_body.h"
 
-int clientfd; /* file descriptor for the client sockets */
+
+#define MST_PORT 2121 /* port number of the master server */
+
+int clt_fd; /* client socket */
 
 
 void sigint(int sgn) {
-	/* close file descriptor if existing */
-	if (fcntl(clientfd, F_GETFD) > 0)
-		Close(clientfd);
+	/* close client socket if existing */
+	if (fcntl(clt_fd, F_GETFD) > 0)
+		Close(clt_fd);
 	
 	exit(0);
 }
@@ -16,23 +19,34 @@ void sigint(int sgn) {
 int main(int argc, char **argv) {
 	Signal(SIGINT, sigint);
 	
+	char slv_host[MAXLINE];
+	int slv_port;
+	
 	/* interprete arguments */
-	char *host;
 	if (argc != 2) {
 		fprintf(stderr, "usage: %s <host>\n", argv[0]);
 		exit(0);
 	}
-	host = argv[1];
 	
-	/* connection to the server */
-	clientfd = Open_clientfd(host, 2121);
-	printf("Client connected to %s.\n", argv[1]); 
+	/* connection to the master server */
+	clt_fd = Open_clientfd(argv[1], MST_PORT);
+	printf("Client connected to the master server %s.\n", argv[1]); 
 	
-	client_body(clientfd);
+	client_mst_body(clt_fd, slv_host, &slv_port);
 	
-	/* disconnection from the server */
-	Close(clientfd);
-	printf("Client disconnected from %s.\n", argv[1]);
+	/* disconnection from the master server */
+	Close(clt_fd);
+	printf("Client disconnected from the master server %s.\n", argv[1]);
+
+	/* connection to the slave server */
+	clt_fd = Open_clientfd(slv_host, slv_port);
+	printf("Client connected to the slave server %s.\n", slv_host); 
+	
+	client_slv_body(clt_fd);
+	
+	/* disconnection from the slave server */
+	Close(clt_fd);
+	printf("Client disconnected from the slave server %s.\n", slv_host);
 	exit(0);
 }
 

@@ -1,9 +1,9 @@
-#ifndef __SERVEUR_BODY_H__
-#define __SERVEUR_BODY_H__
+#ifndef __SERVER_BODY_H__
+#define __SERVER_BODY_H__
 
 
-#define blksize 512         /* maximum number of bytes to send */
-#define root "server_data/" /* directory of the server data */
+#define BLKSIZE 512             /* maximum number of bytes to send */
+#define SRV_ROOT "server_data/" /* directory of the server data */
 
 
 /* receive and execute a command */

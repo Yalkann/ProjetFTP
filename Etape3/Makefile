@@ -13,11 +13,11 @@ LDFLAGS =
 #LIBS += -lsocket -lnsl -lrt
 LIBS += -lpthread
 
-INCLUDE = csapp.h server_body.h client_body.h
-OBJS = csapp.o server_body.o client_body.o
+INCLUDE = csapp.h slaves_body.h master_body.h client_body.h
+OBJS = csapp.o slaves_body.o master_body.o client_body.o
 INCLDIR = -I.
 
-PROGS = server_FTP client_FTP
+PROGS = slaves_FTP master_FTP client_FTP
 
 all: $(PROGS)
 

@@ -2,6 +2,7 @@
 
 
 #define MAX_NAME_LEN 256
+#define SRV_PORT 2121    /* port number of this server */
 #define NB_PROC 5        /* number of executants */
 
 
@@ -15,7 +16,7 @@ void sigchld(int sgn) {
 }
 
 
-void sigintfils(int sgn) {
+void sigintChld(int sgn) {
 	/* close file descriptor if existing */
 	if (fcntl(connfd, F_GETFD) > 0)
 		Close(connfd);
@@ -24,7 +25,7 @@ void sigintfils(int sgn) {
 }
 
 
-void sigintpere(int sgn) {
+void sigintFthr(int sgn) {
 	/* send the signal to all children */
 	Kill(0, SIGINT);
 	while(waitpid(-1, NULL, 0) > 0);
@@ -39,7 +40,7 @@ void sigintpere(int sgn) {
 
 int main(int argc, char **argv) {
 	Signal(SIGCHLD, sigchld);
-	Signal(SIGINT, sigintpere);
+	Signal(SIGINT, sigintFthr);
 	
 	socklen_t clientlen;
 	struct sockaddr_in clientaddr;
@@ -55,13 +56,13 @@ int main(int argc, char **argv) {
 	clientlen = (socklen_t) sizeof(clientaddr);
 	
 	/* connection to the client */
-	listenfd = Open_listenfd(2121);
+	listenfd = Open_listenfd(SRV_PORT);
 	
 	/* creation of the executants */
 	for (int i = 0; i < NB_PROC; i++) {
 		if ((pid = Fork()) == 0) {
 			Signal(SIGCHLD, SIG_DFL);
-			Signal(SIGINT, sigintfils);
+			Signal(SIGINT, sigintChld);
 			
 			/* acceptation loop */
 			while (1) {

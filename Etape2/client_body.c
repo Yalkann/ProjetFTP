@@ -11,7 +11,7 @@ void client_body(int clientfd) {
 	rio_t rio;
 	
 	/* read the log file */
-	logfd = open(logfile, O_RDONLY);
+	logfd = open(LOGFILE, O_RDONLY);
 	if (logfd > 0) {
 		Rio_readinitb(&rio, logfd);
 		err = Rio_readlineb(&rio, line, MAXLINE);
@@ -73,7 +73,7 @@ void client_get(int clientfd, char *file, int fstart) {
 	n = strlen(file)+1;
 	Rio_writen(clientfd, &n, sizeof(size_t));
 	Rio_writen(clientfd, file, n);
-	strcat(strcpy(frep, root), file);
+	strcat(strcpy(frep, CLT_ROOT), file);
 	
 	clock_gettime(CLOCK_REALTIME, &t1);
 	
@@ -93,10 +93,10 @@ void client_get(int clientfd, char *file, int fstart) {
 		
 		/* start to read the content of the transfered file */
 		Rio_readinitb(&rio, clientfd);
-		if (fsize < blksize)
+		if (fsize < BLKSIZE)
 			n = Rio_readnb(&rio, buf, fsize);
 		else
-			n = Rio_readnb(&rio, buf, blksize);
+			n = Rio_readnb(&rio, buf, BLKSIZE);
 		
 		while (fread < fsize) {
 			/* write the content of the file */
@@ -105,20 +105,20 @@ void client_get(int clientfd, char *file, int fstart) {
 			/* inform the log file about the current transfer */
 			fread += n;
 			sprintf(buf, "get %s %ld", file, fread);
-			logfd = Open(logfile, O_WRONLY | O_CREAT, S_IRWXU | S_IRWXG | S_IROTH);
+			logfd = Open(LOGFILE, O_WRONLY | O_CREAT, S_IRWXU | S_IRWXG | S_IROTH);
 			Rio_writen(logfd, buf, strlen(buf));
 			Close(logfd);
 			
 			/* read the content of the transfered file */
-			if (fsize-fread < blksize)
+			if (fsize-fread < BLKSIZE)
 				n = Rio_readnb(&rio, buf, fsize-fread);
 			else
-				n = Rio_readnb(&rio, buf, blksize);
+				n = Rio_readnb(&rio, buf, BLKSIZE);
 		}
 		Close(fd);
 		
 		/* transfer succeeds, remove the log file */
-		remove(logfile);
+		remove(LOGFILE);
 		
 		/* print informations about te transfer */
 		clock_gettime(CLOCK_REALTIME, &t2);

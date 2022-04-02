@@ -2,6 +2,7 @@
 #include "server_body.h"
 
 #define MAX_NAME_LEN 256
+#define SRV_PORT 2121    /* port number of this server */
 #define NB_PROC 5        /* number of executants */
 
 int listenfd, connfd; /* file descriptor for the connection and communication sockets */
@@ -56,7 +57,7 @@ int main(int argc, char **argv) {
 	clientlen = (socklen_t) sizeof(clientaddr);
 	
 	/* connection to the client */
-	listenfd = Open_listenfd(2121);
+	listenfd = Open_listenfd(SRV_PORT);
 	
 	/* creation of the executants */
 	for (int i = 0; i < NB_PROC; i++) {

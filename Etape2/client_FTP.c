@@ -1,11 +1,14 @@
 #include "csapp.h"
 #include "client_body.h"
 
+
+#define SRV_PORT 2121 /* port number of the server */
+
 int clientfd; /* file descriptor for the client sockets */
 
 
 void sigint(int sgn) {
-	/* close file descriptor if existing */
+	/* close socket if existing */
 	if (fcntl(clientfd, F_GETFD) > 0)
 		Close(clientfd);
 	
@@ -25,7 +28,7 @@ int main(int argc, char **argv) {
 	host = argv[1];
 	
 	/* connection to the server */
-	clientfd = Open_clientfd(host, 2121);
+	clientfd = Open_clientfd(host, SRV_PORT);
 	printf("Client connected to %s.\n", argv[1]); 
 	
 	client_body(clientfd);

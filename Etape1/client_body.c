@@ -1,7 +1,7 @@
 #include "csapp.h"
 
 
-#define root "client_data/"
+#define ROOT "client_data/"
 
 
 void client_body(int clientfd) {
@@ -23,7 +23,7 @@ void client_body(int clientfd) {
 	n = strlen(fname)+1;
 	Rio_writen(clientfd, &n, sizeof(size_t));
 	Rio_writen(clientfd, fname, n);
-	strcat(strcpy(frep, root), fname);
+	strcat(strcpy(frep, ROOT), fname);
 	
 	clock_gettime(CLOCK_REALTIME, &t1);
 	

@@ -43,7 +43,7 @@ int server_get(int connfd) {
 	Rio_readn(connfd, &n, sizeof(size_t));
 	Rio_readn(connfd, &buf, n);
 	printf("File to transfer: %s\n", buf);
-	strcat(strcpy(frep, root), buf);
+	strcat(strcpy(frep, SRV_ROOT), buf);
 	
 	/* take informations about the file */
 	if ((fsize = stat(frep, &fstat)) == -1) {
@@ -62,12 +62,12 @@ int server_get(int connfd) {
 
 		/* send the file content */
 		Rio_readinitb(&rio, fd);
-		n = Rio_readnb(&rio, buf, blksize);
+		n = Rio_readnb(&rio, buf, BLKSIZE);
 		while (!pb && fsend < fsize) {
 			fsend += n;
 			n = rio_writen(connfd, buf, n);
 			if (n != -1)
-				n = Rio_readnb(&rio, buf, blksize);
+				n = Rio_readnb(&rio, buf, BLKSIZE);
 			else
 				pb = 1;
 		}

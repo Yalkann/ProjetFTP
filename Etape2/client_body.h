@@ -2,9 +2,9 @@
 #define __CLIENT_BODY_H__
 
 
-#define blksize 512         /* maximum number of bytes to receive */
-#define root "client_data/" /* directory of the client data */
-#define logfile ".log"      /* name of the log file */
+#define BLKSIZE 512             /* maximum number of bytes to receive */
+#define CLT_ROOT "client_data/" /* directory of the client data */
+#define LOGFILE ".log"          /* name of the log file */
 
 
 /* read and execute a command */

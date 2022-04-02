@@ -1,7 +1,7 @@
 #include "csapp.h"
 
 
-#define root "server_data/"
+#define ROOT "server_data/"
 
 
 void server_body(int connfd) {
@@ -17,7 +17,7 @@ void server_body(int connfd) {
 	Rio_readn(connfd, &n, sizeof(size_t));
 	Rio_readn(connfd, &fname, n);
 	printf("Server received %u bytes : %s\n", (unsigned int) n, fname);
-	strcat(strcpy(frep, root), fname);
+	strcat(strcpy(frep, ROOT), fname);
 	
 	/* take informations about the file */
 	if ((fsize = stat(frep, &fstat)) == -1) {
