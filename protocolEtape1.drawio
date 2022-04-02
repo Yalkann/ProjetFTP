@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-02T15:55:01.826Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="4IaioFi60uxiUSHBIVcn" version="17.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-02T16:04:59.888Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="pS3KkH1TIgH66x8LNdDA" version="17.4.0" type="github">
   <diagram id="EzknV4vrXtdMTsb4mSIc" name="Page-1">
     <mxGraphModel dx="1102" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -28,7 +28,7 @@
             <mxPoint x="560" y="80" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HmDkkWHDEEoavgmJ92DL-11" value="entier : nombre de caractères du nom du fichier" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-11" value="entier n : nombre de caractères du nom du fichier" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="160" y="60" width="400" height="20" as="geometry" />
         </mxCell>
         <mxCell id="HmDkkWHDEEoavgmJ92DL-12" value="" style="endArrow=classic;html=1;rounded=0;fontSize=14;" parent="1" edge="1">
@@ -37,7 +37,7 @@
             <mxPoint x="560" y="120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HmDkkWHDEEoavgmJ92DL-13" value="chaine de caractères : nom du fichier" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="HmDkkWHDEEoavgmJ92DL-13" value="chaine de n caractères : nom du fichier" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="160" y="100" width="400" height="20" as="geometry" />
         </mxCell>
         <mxCell id="HmDkkWHDEEoavgmJ92DL-14" value="" style="endArrow=classic;html=1;rounded=0;fontSize=14;" parent="1" edge="1">
